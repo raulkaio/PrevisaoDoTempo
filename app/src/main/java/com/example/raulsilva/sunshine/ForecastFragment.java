@@ -184,7 +184,7 @@ public class ForecastFragment extends Fragment {
                 // "this saturday".
                 long dateTime;
                 // Cheating to convert this to UTC time, which is what we want anyhow
-                dateTime = dayTime.setJulianDay(julianStartDay);
+                dateTime = dayTime.setJulianDay(julianStartDay + i);
                 day = getReadableDateString(dateTime);
 
                 // description is in a child array called "weather", which is 1 element long.
@@ -200,12 +200,13 @@ public class ForecastFragment extends Fragment {
 
                 highAndLow = formatHighLows(high, low);
                 resultStrs[i] = day + " - " + description + " - " + highAndLow;
-                Log.v(LOG_TAG, "Resultado "+i+":"+  resultStrs[i]);
             }
 
-            for (String s : resultStrs) {
+            // Limpando conteúdo do log
+            /*for (String s : resultStrs) {
                 Log.v(LOG_TAG, "Forecast entry: "+  s);
-            }
+            }*/
+
             return resultStrs;
 
         }
@@ -243,8 +244,8 @@ public class ForecastFragment extends Fragment {
                         .build();
 
                 URL url = new URL(builtUri.toString());
-
-                Log.v(LOG_TAG, "Built URI "+  builtUri.toString());
+                //Limpando conteúdo do log
+                //Log.v(LOG_TAG, "Built URI "+  builtUri.toString());
 
                 // Create the request to OpenWeatherMap, and open the connection
                 urlConnection = (HttpURLConnection) url.openConnection();
@@ -274,7 +275,6 @@ public class ForecastFragment extends Fragment {
                 }
                 forecastJsonStr = buffer.toString();
 
-                Log.v(LOG_TAG, "JSON obtido: "+forecastJsonStr);
             } catch (IOException e) {
                 Log.e("PlaceholderFragment", "Error ", e);
                 // If the code didn't successfully get the weather data, there's no point in attemping
