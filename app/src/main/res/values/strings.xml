@@ -2,4 +2,13 @@
     <string name="app_name">Sunshine</string>
     <string name="action_settings">Configurações</string>
     <string name="action_refresh">Atualizar</string>
+    <string name="hello_world">Hello World!</string>
+
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_settings">Configurações</string>
+    <string name="pref_location_label">Local das previsões</string>
+    <string name="pref_location_key">location</string>
+    <string name="pref_location_default">Goiania</string>
 </resources>
