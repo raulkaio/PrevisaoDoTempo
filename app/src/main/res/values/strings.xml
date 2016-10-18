@@ -7,8 +7,20 @@
     <string name="title_activity_detail">DetailActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!-- PARTE DE CONFIGURAÇÕES -->
     <string name="title_activity_settings">Configurações</string>
-    <string name="pref_location_label">Local das previsões</string>
-    <string name="pref_location_key">location</string>
-    <string name="pref_location_default">Goiania</string>
+    <string name="action_map">Localização</string>
+        <!-- Preferências de localização -->
+        <string name="pref_location_label">Local das previsões</string>
+        <string name="pref_location_key">location</string>
+        <string name="pref_location_default">Goiania</string>
+
+        <!-- Preferências de medição -->
+        <string name="pref_units_label">Tipo de medição</string>
+        <string name="pref_units_label_metric">Graus Celsius (metric)</string>
+        <string name="pref_units_label_imperial">Graus Fahrenheit (imperial)</string>
+        <string name="pref_units_key" translatable="false">units</string>
+        <string name="pref_units_metric" translatable="false">metric</string>
+        <string name="pref_units_imperial" translatable="false">imperial</string>
 </resources>
